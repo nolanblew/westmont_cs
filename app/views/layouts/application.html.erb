@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WestmontCs</title>
+  <title>Westmont CS | <%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id="wrapper">
+  <div id="header"></div>
+  <div id="menu"></div>
+  <div id="content">
+    
+    <span style="text-align: center"><H1><%= yield(:title) %></H1></span>
+    
+    <%= yield %>
+  </div>
+  <div id="footer"></div>
+</div>
+
+
 
 </body>
 </html>
