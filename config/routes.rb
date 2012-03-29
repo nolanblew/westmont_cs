@@ -1,4 +1,18 @@
 WestmontCs::Application.routes.draw do
+  get "course_pages/home"
+
+  get "course_pages/what_is_it"
+
+  get "course_pages/alumni"
+
+  get "course_pages/careers"
+
+  get "course_pages/vision"
+
+  get "course_pages/curriculum"
+
+  get "course_pages/research"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
