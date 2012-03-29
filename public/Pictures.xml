@@ -1,0 +1,54 @@
+<PictureAlbum>
+	<ImageWidth>625</ImageWidth>
+	<ImageHeight>400</ImageHeight>
+	
+	<SlideShowImage>
+		<DisplayImage>True</DisplayImage>
+		<ImageUri>images/agt2011.png</ImageUri>
+		
+		<RedirectLink>http://www.nbc.com/agt</RedirectLink>
+		<Order>1</Order>
+		<Title>Me on America's Got Talent</Title>
+		<Description>This is when I was at America's Got Talent</Description>
+	</SlideShowImage>
+	
+	<SlideShowImage>
+		<DisplayImage>True</DisplayImage>
+		<ImageUri>images/Club33.jpg</ImageUri>
+		
+		<RedirectLink>http://www.disneyland.com/</RedirectLink>
+		<Order>2</Order>
+		<Title>Club 33</Title>
+		<Description>When Sophia took me to Club 33</Description>
+	</SlideShowImage>
+	
+	<SlideShowImage>
+		<DisplayImage>True</DisplayImage>
+		<ImageUri>images/jackie_concert_profile</ImageUri>
+		
+		<RedirectLink>http://www.jackieevancho.com/</RedirectLink>
+		<Order>3</Order>
+		<Title>Jackie Evancho</Title>
+		<Description>Jackie Evancho</Description>
+	</SlideShowImage>
+	
+	<SlideShowImage>
+		<DisplayImage>True</DisplayImage>
+		<ImageUri>images/Miley-Wallpaper.jpg</ImageUri>
+		
+		<RedirectLink></RedirectLink>
+		<Order>4</Order>
+		<Title>In my Room</Title>
+		<Description>A creepy picture of me in my room next to Hannah Montana</Description>
+	</SlideShowImage>
+	
+	<SlideShowImage>
+		<DisplayImage>True</DisplayImage>
+		<ImageUri>images/psywe_party.jpg</ImageUri>
+		
+		<RedirectLink>http://www.pacificsymphony.org/</RedirectLink>
+		<Order>5</Order>
+		<Title>Pacific Symphony Youth Orchestra on the beach</Title>
+		<Description>Not real, of course :)</Description>
+	</SlideShowImage>
+</PictureAlbum>

@@ -1,0 +1,63 @@
+/* CSS Document 
+
+	Created by Nolan Blew
+	For Westmont Computer Science
+*/
+
+* {
+	padding: none;
+	margin: none;
+}
+
+body {
+	background: #333;
+}
+
+img {
+	padding:0px;
+	margin:0px;
+	border-width:0px;
+}
+
+#wrapper {
+	width: 1350px;
+	position: relative;
+	margin: 80px auto 40px auto;
+}
+
+#header {
+	background-image:url(img/menu_bg_header.png);
+	width:1350px;
+	height:141px;
+}
+
+#content {
+	background-image:url(img/menu_bg_content.png);
+	background-repeat:no-repeat;
+	width:1350px;
+	height:495px;
+	padding-top: -5px;
+	padding-left:6px;
+	padding-right:6px;
+}
+
+#footer {
+	background-image:url(img/menu_bg_footer.png);
+	width: 1350px;
+	height: 92px;
+}
+
+#home_table {
+	width:100%;
+	border-width:0px;
+}
+
+#pictures {
+	width:350px;
+}
+
+#news {
+	text-align:left;
+	vertical-align:top;
+	padding:10px;
+}
