@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WestmontCs</title>
+  <title>Westmont Computer Science | <%= yield(:section) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="wrapper">
+  <div id="header"></div>
+  <div id="menu"></div>
+  <div id="content">
+    <span style="text-align: center"><h1><%= yield(:section) %></h1></span>
 
-<%= yield %>
+    <%= yield %>
+
+  </div>
+  <div id="footer"></div>
+</div>
 
 </body>
 </html>

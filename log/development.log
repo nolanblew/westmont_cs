@@ -44,3 +44,130 @@ ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
   Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
   Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (36.0ms)
   Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (120.0ms)
+
+
+Started GET "/course_pages/home" for 127.0.0.1 at 2012-03-29 14:47:03 -0700
+Processing by CoursePagesController#home as HTML
+  Rendered course_pages/home.html.erb within layouts/application (27.0ms)
+Compiled course_pages.css  (33ms)  (pid 6008)
+Compiled application.css  (131ms)  (pid 6008)
+Compiled jquery.js  (3ms)  (pid 6008)
+Compiled jquery_ujs.js  (1ms)  (pid 6008)
+Compiled course_pages.js  (739ms)  (pid 6008)
+Compiled application.js  (977ms)  (pid 6008)
+Completed 200 OK in 1351ms (Views: 1351.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/course_pages.css?body=1" for 127.0.0.1 at 2012-03-29 14:47:07 -0700
+Served asset /course_pages.css - 200 OK (22ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-29 14:47:07 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-29 14:47:07 -0700
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-29 14:47:07 -0700
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-29 14:47:07 -0700
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/course_pages.js?body=1" for 127.0.0.1 at 2012-03-29 14:47:07 -0700
+Served asset /course_pages.js - 200 OK (1ms)
+
+
+Started GET "/course_pages/home" for 127.0.0.1 at 2012-03-29 15:15:23 -0700
+Processing by CoursePagesController#home as HTML
+  Rendered course_pages/home.html.erb within layouts/application (0.0ms)
+Compiled application.css  (0ms)  (pid 6008)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/course_pages.css?body=1" for 127.0.0.1 at 2012-03-29 15:15:23 -0700
+Served asset /course_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-29 15:15:23 -0700
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-29 15:15:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/course_pages.js?body=1" for 127.0.0.1 at 2012-03-29 15:15:23 -0700
+Served asset /course_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-29 15:15:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-29 15:15:23 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/course_pages/home" for 127.0.0.1 at 2012-03-29 15:15:25 -0700
+Processing by CoursePagesController#home as HTML
+  Rendered course_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-29 15:15:25 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/course_pages.css?body=1" for 127.0.0.1 at 2012-03-29 15:15:25 -0700
+Served asset /course_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-29 15:15:25 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-29 15:15:25 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/course_pages.js?body=1" for 127.0.0.1 at 2012-03-29 15:15:25 -0700
+Served asset /course_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-29 15:15:25 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/course_pages/home" for 127.0.0.1 at 2012-03-29 15:16:26 -0700
+Processing by CoursePagesController#home as HTML
+  Rendered course_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-29 15:16:26 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/course_pages.css?body=1" for 127.0.0.1 at 2012-03-29 15:16:26 -0700
+Served asset /course_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/course_pages.js?body=1" for 127.0.0.1 at 2012-03-29 15:16:26 -0700
+Served asset /course_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-29 15:16:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-29 15:16:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-29 15:16:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
