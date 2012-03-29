@@ -72,6 +72,10 @@ img {
 	padding-right:10px;
 }
 
+#menu_item:a {
+	color:#FFFFFF;
+}
+
 #content {
 	background-image:url(img/menu_bg_content.png);
 	background-repeat:no-repeat;
