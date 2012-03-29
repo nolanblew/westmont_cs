@@ -22,7 +22,11 @@ img {
 #wrapper {
 	width: 1350px;
 	position: relative;
+<<<<<<< HEAD
 	margin: 80px auto 40px auto;
+=======
+	margin: 60px auto 40px auto;
+>>>>>>> HomePage
 }
 
 #header {
@@ -31,6 +35,7 @@ img {
 	height:141px;
 }
 
+<<<<<<< HEAD
 #menu{
 	background-image:url(img/menu_bg_menu.png);
 	background-repeat:no-repeat;
@@ -42,15 +47,39 @@ img {
 }
 
 #menu_item{
+=======
+#menu {
+	background-image:url(img/menu_bg_menu.png);
+	background-repeat:no-repeat;
+	width: 1350px;
+	height: 35px;
+	
+	padding-left:30px;
+	padding-top:10px;
+	
+	vertical-align:middle;
+}
+
+#menu_item {
+	
+>>>>>>> HomePage
 	color:#FFFFFF;
 	font-size:20px;
 	font-style:oblique;
 	
+<<<<<<< HEAD
 	vertical-align:middle;
 	padding-top:10px;
 	padding-left:10px;
 	padding-right:10px;
 	padding-bottom:5px;
+=======
+	text-align:center;
+	vertical-align:middle;
+	
+	padding-left:10px;
+	padding-right:10px;
+>>>>>>> HomePage
 }
 
 #content {
@@ -81,5 +110,12 @@ img {
 #news {
 	text-align:left;
 	vertical-align:top;
+<<<<<<< HEAD
 	padding:10px;
+=======
+	padding-top:5px;
+	padding-left:15px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+>>>>>>> HomePage
 }
