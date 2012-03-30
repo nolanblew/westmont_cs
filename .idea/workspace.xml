@@ -31,10 +31,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/course_pages/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="18" selection-start="100" selection-end="100" vertical-scroll-proportion="0.04042806">
+            <state line="2" column="61" selection-start="100" selection-end="100" vertical-scroll-proportion="-1.3076923">
               <folding />
             </state>
           </provider>
@@ -52,16 +52,16 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="36" selection-start="491" selection-end="491" vertical-scroll-proportion="-15.692307">
+            <state line="17" column="76" selection-start="431" selection-end="431" vertical-scroll-proportion="-11.115385">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="17" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.0">
+            <state line="98" column="39" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.8627451">
               <folding />
             </state>
           </provider>
@@ -606,23 +606,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+    <entry file="file://$PROJECT_DIR$/app/views/course_pages/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="17" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.0">
+        <state line="2" column="61" selection-start="100" selection-end="100" vertical-scroll-proportion="-1.3076923">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="36" selection-start="491" selection-end="491" vertical-scroll-proportion="-15.692307">
+        <state line="17" column="76" selection-start="431" selection-end="431" vertical-scroll-proportion="-11.115385">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/course_pages/home.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="100" selection-end="100" vertical-scroll-proportion="0.04042806">
+        <state line="98" column="39" selection-start="1826" selection-end="1826" vertical-scroll-proportion="0.8627451">
           <folding />
         </state>
       </provider>

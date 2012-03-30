@@ -72,8 +72,17 @@ img {
 	padding-right:10px;
 }
 
-#menu_item:a {
+a:link {
 	color:#FFFFFF;
+	text-decoration:none;
+}
+a:visited {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+a:hover {
+	color:#FFFFFF;
+	text-decoration:underline;
 }
 
 #content {
