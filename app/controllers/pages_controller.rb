@@ -32,11 +32,11 @@ class PagesController < ApplicationController
         @content = page.content.html_safe
       else
         @title = "Error"
-        @content = "An error has occurred. There is no page \"" + sec.home + "\" in \"" + params[:section] +"\" on this site."
+        @content = "An error has occurred. There is no page \"" + sec.home + "\" in \"" + params[:sections] +"\" on this site."
       end
     else
       @title = "Error"
-      @content = "An error has occurred. There is no section \"" + params[:section] + "\" on this site."
+      @content = "An error has occurred. There is no section \"" + params[:sections] + "\" on this site."
     end
     render 'page'
   end

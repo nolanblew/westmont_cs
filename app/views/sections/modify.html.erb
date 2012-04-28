@@ -1,0 +1,47 @@
+<% provide(:title, @method + " a Section") %>
+<div style="text-align: center">
+
+  <% if @section.errors.any? %>
+      The form contains <%= pluralize(@section.errors.count, "error") %>.
+
+      <ul>
+        <% @section.errors.full_messages.each do |msg| %>
+            <li>* <%= msg %></li>
+        <% end %>
+      </ul>
+  <% end %>
+
+  <i>Fill in the information below to <%= @method %> a section.</i>
+  <br/><br/>
+
+  <%= form_for(@section) do |f| %>
+
+      <%= f.label :name %>
+      <br/>
+      <%= f.text_field :name %>
+      <br/><br/>
+
+      <%= f.label :alias %>
+      <br/>
+      <%= f.text_field :alias %>
+      <br/><br/>
+
+      <%= f.label :description %>
+      <br/>
+      <%= f.text_field :description %>
+      <br/><br/>
+
+      <%= f.label :home, "Home Page" %>
+      <br/>
+      <% if @method == "Add" %>
+          <input type="hidden" name="section[home]" value="home">{New Home Page}
+      <% else %>
+          <%= f.select(:home, @section.pages.all.collect { |page| [page.name, page.alias] }) %>
+      <% end %>
+      <br/><br/>
+      <%= f.check_box :visible %> Page is accessible by link (page is always accessible by URL)<br/><br/>
+
+      <%= f.submit @method + " Section", style: "width:150px; height: 35px;" %>
+
+  <% end %>
+  </div>

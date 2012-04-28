@@ -1,0 +1,28 @@
+// Place all the styles related to the Administrator controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.view_table {
+  text-align: left;
+}
+
+.header_table {
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.header_row_table {
+  border-bottom-style: solid;
+  border-bottom: #000000;
+  border-bottom-width: 1px;
+}
+
+ .row_table {
+
+ }
+
+ .tr_table {
+   padding-left: 10px;
+   padding-right: 5px;
+ }

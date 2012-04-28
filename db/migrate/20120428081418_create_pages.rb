@@ -7,6 +7,7 @@ class CreatePages < ActiveRecord::Migration
       t.string :description
       t.text :content
 
+      t.integer :position
       t.boolean :visible, default: true
 
       t.timestamps

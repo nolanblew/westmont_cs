@@ -6,6 +6,7 @@ class CreateSections < ActiveRecord::Migration
       t.string :description
       t.string :home
 
+      t.integer :position
       t.string :visible, default: true
 
       t.timestamps

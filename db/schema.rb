@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20120428081418) do
     t.string   "name"
     t.string   "description"
     t.text     "content"
+    t.integer  "position"
     t.boolean  "visible",     :default => true
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20120428081418) do
     t.string   "alias"
     t.string   "description"
     t.string   "home"
+    t.integer  "position"
     t.string   "visible",     :default => "t"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
@@ -39,8 +41,11 @@ ActiveRecord::Schema.define(:version => 20120428081418) do
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "password_digest"
+    t.string   "remember_token"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
+
+  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end
