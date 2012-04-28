@@ -3,24 +3,32 @@
 <head>
 
   <title>Westmont Computer Science | <%= yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div id="wrapper">
   <div id="header"></div>
-  <div id="menu"></div>
+  <div id="menu">
+    <% Section.all.each do |sec| %>
+        <span id="menu_item"><%= link_to sec.name, "/" + sec.alias %></span>
+    <% end %>
+  </div>
   <div id="content">
     <table style="width: 100%">
       <tr>
-        <td class="table_sub_menu">
+        <% if !@submenu.nil? %>
+            <td class="table_sub_menu">
 
-          <h2>Sub-Menu</h2>
-          <hr/>
-          Hello
+              <h2>Sub-Menu</h2>
+              <hr/>
+              <% @submenu.pages.all.each do |sbmenu| %>
+                  <% if sbmenu.visible %><div><%= link_to sbmenu.name, "/" + @submenu.alias + "/" + sbmenu.alias %></div><% end %>
+              <% end %>
 
-        </td>
+            </td>
+        <% end %>
         <td class="table_content">
           <span style="text-align: center"><h1><%= yield(:title) %></h1></span>
 

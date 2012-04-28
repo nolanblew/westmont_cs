@@ -1,9 +1,44 @@
 class PagesController < ApplicationController
 
   def page
-    @title = params[:page]
-    @content = params[:page] + " in category " + params[:category]
+    sec = Section.find_by_alias(params[:section])
+    if !sec.nil?
 
+      @submenu = sec
+
+      page = sec.pages.find_by_alias(params[:page])
+      if !page.nil?
+        @title = page.name
+        @content = page.content.html_safe
+      else
+        @title = "Error"
+        @content = "An error has occurred. There is no page \"" + params[:page] + "\" in \"" + params[:section] +"\" on this site."
+      end
+    else
+      @title = "Error"
+      @content = "An error has occurred. There is no section \"" + params[:section] + "\" on this site."
+    end
+  end
+
+  def home
+    sec = Section.find_by_alias(params[:section])
+    if !sec.nil?
+
+      @submenu = sec
+
+      page = sec.pages.find_by_alias(sec.home)
+      if !page.nil?
+        @title = page.name
+        @content = page.content.html_safe
+      else
+        @title = "Error"
+        @content = "An error has occurred. There is no page \"" + sec.home + "\" in \"" + params[:section] +"\" on this site."
+      end
+    else
+      @title = "Error"
+      @content = "An error has occurred. There is no section \"" + params[:section] + "\" on this site."
+    end
+    render 'page'
   end
 
 end

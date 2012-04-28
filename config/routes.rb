@@ -2,7 +2,8 @@ WestmontCs::Application.routes.draw do
 
   get "pages/page"
 
-  match ":category/:page" => "pages#page"
+  match ":section/:page" => "pages#page"
+  match ":section" => "pages#home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
