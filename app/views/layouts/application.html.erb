@@ -2,7 +2,7 @@
 <html>
 <head>
 
-  <title>Westmont Computer Science | <%= yield(:section) %></title>
+  <title>Westmont Computer Science | <%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -12,9 +12,22 @@
   <div id="header"></div>
   <div id="menu"></div>
   <div id="content">
-    <span style="text-align: center"><h1><%= yield(:section) %></h1></span>
+    <table style="width: 100%">
+      <tr>
+        <td class="table_sub_menu">
 
-    <%= yield %>
+          <h2>Sub-Menu</h2>
+          <hr/>
+          Hello
+
+        </td>
+        <td class="table_content">
+          <span style="text-align: center"><h1><%= yield(:title) %></h1></span>
+
+          <%= yield %>
+        </td>
+      </tr>
+    </table>
 
   </div>
   <div id="footer"></div>

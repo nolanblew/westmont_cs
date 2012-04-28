@@ -1,17 +1,8 @@
 WestmontCs::Application.routes.draw do
-  get "course_pages/home"
 
-  get "course_pages/what_is_it"
+  get "pages/page"
 
-  get "course_pages/alumni"
-
-  get "course_pages/careers"
-
-  get "course_pages/vision"
-
-  get "course_pages/curriculum"
-
-  get "course_pages/research"
+  match ":category/:page" => "pages#page"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
