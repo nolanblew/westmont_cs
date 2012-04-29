@@ -1,9 +1,13 @@
 WestmontCs::Application.routes.draw do
+  get "home/home"
+
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :sections do
     resources :pages
   end
+
+  root to: "home#home"
 
   get "administrator/users"
   get "administrator/sections"

@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   def create
     @section = Section.find(params[:section_id])
     if @section.pages.create!(params[:page])
-      redirect_to "/administrator/sections/" + @section.id.to_s + "/pages"
+      redirect_to "/administrator/" + @section.id.to_s + "/pages"
     else
       @method = "Add"
       render 'modify'
@@ -33,7 +33,7 @@ class PagesController < ApplicationController
     @section = Section.find(params[:section_id])
     @page = @section.pages.find(params[:id])
     if @page.update_attributes(params[:page])
-      redirect_to "/administrator/sections/" + @section.id.to_s + "/pages"
+      redirect_to "/administrator/" + @section.id.to_s + "/pages"
     else
       @method = "Modify"
       render 'modify'
@@ -43,7 +43,7 @@ class PagesController < ApplicationController
   def destroy
     @section = Section.find(params[:section_id])
     @page = @section.page.find(params[:id]).delete
-    redirect_to "/administrator/sections/" + @section.id.to_s + "/pages"
+    redirect_to "/administrator/" + @section.id.to_s + "/pages"
   end
 
 
