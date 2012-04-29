@@ -5,6 +5,10 @@ class AdministratorController < ApplicationController
   end
 
   def pages
+
+    @section = Section.find(params[:section])
+
+
   end
 
   def users

@@ -23,9 +23,11 @@
 
               <h2>Sub-Menu</h2>
               <hr/>
+              <div><%= image_tag "submenu_top.png" %></div>
               <% @submenu.pages.all.each do |sbmenu| %>
                   <% if sbmenu.visible %><div id="sbmenu" class="submenu"><%= link_to sbmenu.name, "/" + @submenu.alias + "/" + sbmenu.alias %></div><% end %>
               <% end %>
+              <div><%= image_tag "submenu_bottom.png" %></div>
 
             </td>
         <% end %>
@@ -38,8 +40,7 @@
     </table>
 
   </div>
-  <div id="footer"></div>
+  <div id="footer">&copy;2012 <a href="http://www.westmont.edu/">Westmont College</a>. All rights reserved.</div>
 </div>
-<%= debug(params) if Rails.env.development? %>
 </body>
 </html>

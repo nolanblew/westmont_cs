@@ -1,49 +1,44 @@
 class PageController < ApplicationController
-  before_filter :is_signed_in
 
-  def new
-    @section = Section.new
-    @method = "Add"
-    render 'modify'
-  end
+  def page
+    sec = Section.find_by_alias(params[:section])
+    if !sec.nil?
 
-  def create
-    @section = Section.new(params[:sections])
-    if @section.save
-      redirect_to "/administrator/sections"
+      @submenu = sec
+
+      page = sec.pages.find_by_alias(params[:page])
+      if !page.nil?
+        @title = page.name
+        @content = page.content.html_safe
+      else
+        @title = "Error"
+        @content = "An error has occurred. There is no page \"" + params[:page] + "\" in \"" + params[:section] +"\" on this site."
+      end
     else
-      @method = "Add"
-      render 'modify'
+      @title = "Error"
+      @content = "An error has occurred. There is no section \"" + params[:section] + "\" on this site."
     end
   end
 
-  def edit
-    @section = Section.find(params[:id])
-    if !@sectin.nil?
-      render 'modify'
+  def home
+    sec = Section.find_by_alias(params[:section])
+    if !sec.nil?
+
+      @submenu = sec
+
+      page = sec.pages.find_by_alias(sec.home)
+      if !page.nil?
+        @title = page.name
+        @content = page.content.html_safe
+      else
+        @title = "Error"
+        @content = "An error has occurred. There is no page \"" + sec.home + "\" in \"" + params[:sections] +"\" on this site."
+      end
     else
-      @method = "Modify"
-      redirect_to "/administrator/sections"
+      @title = "Error"
+      @content = "An error has occurred. There is no section \"" + params[:sections] + "\" on this site."
     end
-  end
-
-  def update
-    @section = Section.find(params[:id])
-    if @section.update_attributes(params[:sections])
-      redirect_to "/administrator/sections"
-    else
-      @method = "Modify"
-      render 'modify'
-    end
-  end
-
-  def destroy
-    @section = Section.find[:id]
-    @section.pages.each do |page|
-      page.destroy
-    end
-    @section.destroy
-    redirect_to "/administrator/sections"
+    render 'page'
   end
 
 end

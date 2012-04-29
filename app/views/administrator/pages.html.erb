@@ -1,2 +1,34 @@
-<h1>Administrator#pages</h1>
-<p>Find me in app/views/administrator/pages.html.erb</p>
+<div style="text-align: center">
+  <h1>Pages</h1>
+  <i>Create, edit or delete pages for the <%= @section.name %> section here.</i><br/><br/>
+  <%= link_to "Create New Page", new_section_page_path(@section) %> <br/><br/>
+
+  <table class="view_table">
+    <tr class="header_row_table">
+      <td class="header_table">Name</td>
+      <td class="header_table">Alias</td>
+      <td class="header_table">Description</td>
+      <td class="header_table">Edit</td>
+      <td class="header_table">Move</td>
+      <td class="header_table">Delete</td>
+    </tr>
+
+    <% list = @section.pages.all %>
+    <% for i in 0..list.size-1 %>
+        <tr class="row_table">
+          <td class="tr_table"><%= list[i].name %></td>
+          <td class="tr_table"><%= list[i].alias %></td>
+          <td class="tr_table"><%= list[i].description %></td>
+          <td class="tr_table"><%= link_to "Edit", edit_section_page_path(@section, list[i]) %></td>
+          <td class="tr_table">
+            <%= link_to image_tag("arrow_up.png"), "/administrator/" + @section.id.to_s + "/pages/" + list[i].id.to_s + "/move_up" if i > 0 %>
+            <%= link_to image_tag("arrow_down.png"), "/administrator/" + @section.id.to_s + "/pages/" + list[i].id.to_s + "/move_down" if i < list.size-1 %>
+          </td>
+          <td class="tr_table"><%= link_to "Delete", page_path(list[i]), method: :delete, confirm: "Are you sure you want to delete this page? This cannot be undone." if list.size > 1 %></td>
+        </tr>
+    <% end %>
+
+  </table>
+  <br/><br/>
+
+</div>

@@ -1,7 +1,9 @@
 WestmontCs::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
-  resources :page
-  resources :sections
+
+  resources :sections do
+    resources :pages
+  end
 
   get "administrator/users"
   get "administrator/sections"
@@ -9,12 +11,14 @@ WestmontCs::Application.routes.draw do
   match "administrator/:section/pages" => "administrator#pages"
   match "administrator/:section/move_up" => "sections#move_up"
   match "administrator/:section/move_down" => "sections#move_down"
+  match "administrator/:section/pages/:page/move_up" => "pages#move_up"
+  match "administrator/:section/pages/:page/move_down" => "pages#move_down"
 
   match "administrator" => "sessions#new"
   match "administrator/logout" => "sessions#destroy", via: :delete
 
-  match ":section/:page" => "pages#page"
-  match ":section" => "pages#home"
+  match ":section/:page" => "page#page"
+  match ":section" => "page#home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
