@@ -11,7 +11,7 @@
       </ul>
   <% end %>
 
-  <i>Fill in the information below to <%= @method %> a section.</i>
+  <i>Fill in the information below to <%= @method.downcase %> a section.</i>
   <br/><br/>
 
   <%= form_for(@section) do |f| %>

@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120428081418) do
+ActiveRecord::Schema.define(:version => 20120430201907) do
+
+  create_table "news", :force => true do |t|
+    t.string   "title"
+    t.string   "short_description"
+    t.string   "long_description"
+    t.string   "alias"
+    t.integer  "category"
+    t.integer  "created_by"
+    t.boolean  "front_page"
+    t.string   "tags"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
   create_table "pages", :force => true do |t|
     t.integer  "section_id"

@@ -1,0 +1,36 @@
+<div style="text-align: center">
+  <h1>News Articles</h1>
+  <i>Create, edit or delete news articles here.</i><br/><br/>
+  <%= link_to "Create New Article", new_news_path %> <br/><br/>
+
+  <table class="view_table">
+    <tr class="header_row_table">
+      <td class="header_table">Title</td>
+      <td class="header_table">Alias</td>
+      <td class="header_table">Short Description</td>
+      <td class="header_table">Category</td>
+      <td class="header_table">Visible on Home Page</td>
+      <td class="header_table">Edit</td>
+      <td class="header_table">View Article</td>
+      <td class="header_table">Delete</td>
+    </tr>
+
+    <% list = News.find(:all) %>
+    <% for i in 0..list.size-1 %>
+        <tr class="row_table">
+          <td class="tr_table"><%= list[i].title %></td>
+          <td class="tr_table"><%= list[i].alias %></td>
+          <td class="tr_table"><%= list[i].short_description %></td>
+          <td class="tr_table"><%= Section.find(list[i].category).name %></td>
+          <td class="tr_table"><%= list[i].front_page %></td>
+          <td class="tr_table"><%= link_to "Edit", edit_news_path(list[i]) %></td>
+          <td class="tr_table"><%= link_to "View", news_path(list[i]) %></td>
+          <td class="tr_table"><%= link_to "Delete", news_path(list[i]), method: :delete, confirm: "Are you sure you want to delete this news article? This cannot be undone." %></td>
+        </tr>
+    <% end %>
+
+  </table>
+
+  <br/><br/>
+
+</div>

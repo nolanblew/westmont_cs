@@ -1,4 +1,6 @@
 WestmontCs::Application.routes.draw do
+  get "news/modify"
+
   get "home/home"
 
   resources :sessions, only: [:new, :create, :destroy]
@@ -7,10 +9,17 @@ WestmontCs::Application.routes.draw do
     resources :pages
   end
 
+  resources :news
+
+  match "news/:category/:id" => "news#show"
+  match "news/:category" => "news#list"
+  match "news" => "news#list"
+
   root to: "home#home"
 
   get "administrator/users"
   get "administrator/sections"
+  get "administrator/news"
 
   match "administrator/:section/pages" => "administrator#pages"
   match "administrator/:section/move_up" => "sections#move_up"
