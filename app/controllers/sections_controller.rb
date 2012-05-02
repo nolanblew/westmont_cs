@@ -10,7 +10,8 @@ class SectionsController < ApplicationController
 
   def create
     @section = Section.new(params[:section])
-    @section.position = Section.count + 1
+    pos = Section.all
+    @section.position = largest_position(pos) + 1
     @section.home = "home"
     if @section.save
       @section.pages.create!(name: "Home", alias: "home", description: "Default home page.", content: "This is the default home page for the newly created section " + @section.name + "!<br/><br/>Edit this section to edit the home page or change the home page to an existing page though the edit menu.", visible: true, position: 1)

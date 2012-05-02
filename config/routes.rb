@@ -17,6 +17,8 @@ WestmontCs::Application.routes.draw do
 
   root to: "home#home"
 
+  match "administrator/logout" => "sessions#destroy", via: :delete
+
   get "administrator/users"
   get "administrator/sections"
   get "administrator/news"
@@ -28,7 +30,6 @@ WestmontCs::Application.routes.draw do
   match "administrator/:section/pages/:page/move_down" => "pages#move_down"
 
   match "administrator" => "sessions#new"
-  match "administrator/logout" => "sessions#destroy", via: :delete
 
   match ":section/:page" => "page#page"
   match ":section" => "page#home"
